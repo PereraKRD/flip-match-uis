@@ -172,7 +172,7 @@ $(function () {
 
   $("#winExitBtn, #exitBtn").on("click", function (e) {
     e.preventDefault();
-    window.location.href = "flip-match-initial.html";
+    window.location.href = "index.html";
   });
 
   startGame();
