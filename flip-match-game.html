@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Flip &amp; Match</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/page-flip-match.css">
+</head>
+
+<body>
+  <div class="card shadow-none flip-match-screen game-screen"
+      data-bg-desktop="img/flip-match/game-screen.png"
+      data-bg-tablet="img/flip-match/tablet-game-screen.png"
+      data-bg-phone="img/flip-match/phone-game-screen.png">
+    <div class="flip-match-hud">
+      <div class="flip-match-hud-chip"><img src="img/flip-match/hourglass.png" alt="">
+        <div><span class="flip-match-hud-label">Time Left</span><span class="flip-match-hud-value"
+            id="timeLeft">02:30</span></div>
+      </div>
+      <div class="flip-match-hud-chip"><img src="img/flip-match/moves.png" alt="">
+        <div><span class="flip-match-hud-label">Moves</span><span class="flip-match-hud-value" id="movesCount">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-match-game-content">
+      <div class="flip-match-board" id="board"></div>
+    </div>
+  </div>
+
+  <div class="flip-match-modal" id="badLuckModal" style="display: none;">
+    <div class="flip-match-modal-overlay"></div>
+    <div class="flip-match-modal-card"><img class="flip-match-modal-emoji"
+        src="img/flip-match/bad-luck-emoji.png" alt="">
+      <h2 class="flip-match-modal-title bad-luck-title">Bad Luck!</h2>
+      <p class="flip-match-modal-subtitle">Better luck next time</p><a class="flip-match-modal-btn exit-btn" href="flip-match-initial.html"
+        id="exitBtn"><span>Exit</span><i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="flip-match-modal" id="winModal" style="display: none;">
+    <div class="flip-match-modal-overlay"></div>
+    <div class="flip-match-modal-card flip-match-modal-card-win">
+      <button class="flip-match-modal-close" id="winCloseBtn" type="button"><i class="fa fa-times"></i></button><img
+        class="flip-match-modal-trophy" src="img/flip-match/win-trophy.png" alt="">
+      <h2 class="flip-match-modal-title">Great Job!</h2>
+      <p class="flip-match-modal-subtitle">You've made</p>
+      <div class="flip-match-modal-stats">
+        <div class="flip-match-modal-stat"><img class="trophy-icon" src="img/flip-match/trophy.png" alt="">
+          <div class="flip-value-wrapper"><strong class="value" id="finalMatches">6</strong><span
+              class="sub-content">matches</span><span>out of 18</span></div>
+        </div>
+        <div class="flip-match-modal-divider"></div>
+        <div class="flip-match-modal-stat"><img class="hourglass-icon"
+            src="img/flip-match/half-hourglass.png" alt=""><div class="flip-value-wrapper"><strong class="value"
+              id="finalTime">01:20</strong><span class="sub-content">time taken</span></div></div>
+      </div>
+      <p class="flip-match-modal-note">
+        Well done! Keep exploring Gallery HR <br>and discover more features!</p><a class="flip-match-modal-btn"
+        href="flip-match-initial.html" id="winExitBtn"><span>Exit</span><i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script>var FLIP_MATCH_IMG_PATH = 'img/flip-match/';</script>
+  <script src="flip-match-game-controller.js"></script>
+</body>
+</html>

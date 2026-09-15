@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Flip &amp; Match</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/page-flip-match.css">
+</head>
+
+<body>
+  <div class="card shadow-none flip-match-screen initial-screen"
+      data-bg-desktop="img/flip-match/initial-screen.png"
+      data-bg-tablet="img/flip-match/tablet-initial-screen.png"
+      data-bg-phone="img/flip-match/phone-initial-screen.png">
+    <div class="flip-match-overlay">
+      <p class="flip-match-instruction">Enter the 4 digit code you received</p>
+      <div class="flip-match-code" id="codeInputs">
+        <input class="flip-match-code-box" type="text" inputmode="numeric" maxlength="1" data-index="0">
+        <input class="flip-match-code-box" type="text" inputmode="numeric" maxlength="1" data-index="1">
+        <input class="flip-match-code-box" type="text" inputmode="numeric" maxlength="1" data-index="2">
+        <input class="flip-match-code-box" type="text" inputmode="numeric" maxlength="1" data-index="3">
+      </div>
+      <p class="flip-match-code-error" id="codeError">Please enter all 4 digits to continue.</p>
+      <button class="flip-match-btn" id="startBtn" type="button" disabled><i class="fa fa-play"></i><span>Start
+          Game</span></button>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="flip-match-initial-controller.js"></script>
+</body>
+</html>
